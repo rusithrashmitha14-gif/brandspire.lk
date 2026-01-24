@@ -1,0 +1,82 @@
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --accent: #77FF3C;
+  --accent-foreground: #000000;
+  --muted: #f4f4f4;
+  --muted-foreground: #666666;
+  --border: #e2e2e2;
+  --radius: 4px;
+  
+  --container-max-width: 1200px;
+  --section-padding: 120px;
+}
+
+[data-theme="dark"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #77FF3C;
+  --accent-foreground: #000000;
+  --muted: #111111;
+  --muted-foreground: #a1a1a1;
+  --border: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-urbanist), var(--font-inter), sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px;
+  }
+}

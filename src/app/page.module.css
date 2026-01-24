@@ -1,0 +1,136 @@
+.container {
+    min-height: 100vh;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+}
+
+.title {
+    font-size: clamp(48px, 8vw, 84px);
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.subtitle {
+    font-size: clamp(18px, 2vw, 22px);
+    opacity: 0.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.heroActions {
+    display: flex;
+    gap: 20px;
+}
+
+.heroVisual {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    width: 60%;
+    height: 80%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(119, 255, 60, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: float 10s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+@keyframes float {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(100px, 50px);
+    }
+}
+
+.sectionHeader {
+    margin-bottom: 60px;
+}
+
+.label {
+    display: block;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.sectionTitle {
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.serviceCard {
+    padding: 40px;
+    background-color: var(--muted);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.serviceCard h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.serviceCard p {
+    opacity: 0.7;
+}
+
+.ctaStrip {
+    padding: 100px 0;
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    text-align: center;
+}
+
+.ctaContent h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .heroActions {
+        flex-direction: column;
+    }
+}

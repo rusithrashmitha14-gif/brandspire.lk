@@ -1,0 +1,106 @@
+.container {
+    padding-top: 80px;
+}
+
+.hero {
+    padding: 100px 0 60px;
+    background-color: var(--muted);
+}
+
+.label {
+    display: block;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: clamp(32px, 6vw, 64px);
+    max-width: 900px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.lead {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.storyContent p:not(.lead) {
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+.abstractVisual {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--muted) 0%, var(--border) 100%);
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+}
+
+.abstractVisual::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(119, 255, 60, 0.1), transparent 50%);
+}
+
+.sectionTitle {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 60px;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.valueCard h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--accent);
+}
+
+.valueCard p {
+    opacity: 0.7;
+}
+
+.teamGrid {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+}
+
+.placeholder {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .storyGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

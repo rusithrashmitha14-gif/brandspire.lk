@@ -1,0 +1,75 @@
+.footer {
+    background-color: var(--muted);
+    padding: 80px 0 40px;
+    border-top: 1px solid var(--border);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-family: var(--font-urbanist);
+    font-size: 24px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.tagline {
+    opacity: 0.6;
+    max-width: 240px;
+}
+
+.column h4 {
+    font-size: 16px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.column li {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    font-size: 15px;
+}
+
+.column li:hover {
+    opacity: 1;
+}
+
+.bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.legal {
+    display: flex;
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
