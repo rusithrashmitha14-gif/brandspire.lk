@@ -18,14 +18,14 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
-            <div className={`container ${styles.container}`}>
+            <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    Brandspire
+                    <img src="/brand-logo.png" alt="Brandspire" className={styles.logoImg} />
                 </Link>
 
                 <div className={styles.links}>
                     <Link href="/services" className={styles.link}>Services</Link>
-                    <Link href="/case-studies" className={styles.link}>Work</Link>
+                    <Link href="/case-studies" className={styles.link}>Case Studies</Link>
                     <Link href="/about" className={styles.link}>About</Link>
                     <Link href="/blog" className={styles.link}>Blog</Link>
                     <Link href="/contact" className={styles.link}>Contact</Link>

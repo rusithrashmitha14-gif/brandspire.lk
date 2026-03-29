@@ -1,0 +1,270 @@
+.container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 8px;
+    color: #0f172a;
+}
+
+.header p {
+    color: #64748b;
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    gap: 16px;
+}
+
+.statBox {
+    background: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    min-width: 100px;
+}
+
+.statVal {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.statLabel {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.section h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.unpaidTitle { color: #ef4444; }
+.paidTitle { color: #10b981; }
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.clientGroupCard {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.clientHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.clientInfo h3 {
+    margin: 0 0 4px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.clientContact {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.groupTotal {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.totalLabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.totalAmount {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: column;
+}
+
+.subItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.subItem:last-child {
+    border-bottom: none;
+}
+
+.subItemMain {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.miniType {
+    font-size: 9px;
+    font-weight: 800;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.subItemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.subItemDetails strong {
+    font-size: 15px;
+    color: #0f172a;
+}
+
+.miniExpiry {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.cycleBadge {
+    font-size: 10px;
+    font-weight: 700;
+    color: #3b82f6;
+    background: #eff6ff;
+    padding: 1px 6px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    display: inline-block;
+    width: fit-content;
+}
+
+.subItemActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.priceInfo {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 14px;
+}
+
+.miniEditBtn {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    transition: all 0.2s;
+}
+
+.miniEditBtn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.unpaidToggleBtn {
+    padding: 6px 16px;
+    border-radius: 6px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.unpaidToggleBtn:hover {
+    background: #2563eb;
+}
+
+.paidToggleBtn {
+    padding: 6px 16px;
+    border-radius: 6px;
+    background: #10b981;
+    color: white;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.paidToggleBtn:hover {
+    background: #059669;
+}
+
+.unpaidToggleBtn:disabled, .paidToggleBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.empty {
+    text-align: center;
+    padding: 40px;
+    background: #f8fafc;
+    border-radius: 12px;
+    color: #94a3b8;
+    font-style: italic;
+    border: 2px dashed #e2e8f0;
+}
+
+@media (max-width: 1000px) {
+    .sections {
+        grid-template-columns: 1fr;
+    }
+}

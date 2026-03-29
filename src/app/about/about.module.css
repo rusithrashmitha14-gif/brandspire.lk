@@ -1,106 +1,261 @@
 .container {
-    padding-top: 80px;
+    padding-top: 0;
 }
 
+.fullWidthContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+
+/* Hero Section */
 .hero {
-    padding: 100px 0 60px;
-    background-color: var(--muted);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 10;
 }
 
 .label {
-    display: block;
-    color: var(--accent);
-    text-transform: uppercase;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    font-size: 14px;
     letter-spacing: 0.1em;
     font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #ffffff;
 }
 
 .title {
-    font-size: clamp(32px, 6vw, 64px);
-    max-width: 900px;
+    font-size: clamp(48px, 8vw, 100px);
+    font-weight: 700;
+    line-height: 1.05;
+    max-width: 1200px;
+    margin-bottom: 24px;
+    color: #ffffff;
 }
 
 .highlight {
-    color: var(--accent);
+    color: #77FF3C;
+}
+
+/* Story Section */
+.storySection {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 140px 0;
 }
 
 .storyGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 100px;
     align-items: center;
 }
 
 .lead {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: 600;
     line-height: 1.4;
+    margin-bottom: 40px;
 }
 
-.storyContent p:not(.lead) {
-    opacity: 0.7;
-    font-size: 18px;
+.desc {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #4a4a4a;
 }
 
-.abstractVisual {
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--muted) 0%, var(--border) 100%);
-    border-radius: var(--radius);
+.storyImageWrapper {
     position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 40px;
     overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.abstractVisual::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(119, 255, 60, 0.1), transparent 50%);
+.locationImage {
+    transition: transform 0.5s ease;
+}
+
+.storyImageWrapper:hover .locationImage {
+    transform: scale(1.02);
+}
+
+/* Values Section */
+.valuesSection {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 140px 0;
+}
+
+.valuesHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.labelDark {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(119, 255, 60, 0.1);
+    color: #77FF3C;
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
 .sectionTitle {
-    font-size: clamp(32px, 5vw, 48px);
-    margin-bottom: 60px;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .valuesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
+.valueCard {
+    background-color: #111111;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 60px 40px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.valueCard:hover {
+    transform: translateY(-10px);
+    border-color: rgba(119, 255, 60, 0.3);
+}
+
+.valueIcon {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
 .valueCard h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
-    color: var(--accent);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .valueCard p {
-    opacity: 0.7;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Team Section */
+.teamSection {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 140px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.teamHeader {
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 .teamGrid {
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed var(--border);
-    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.teamCard {
+    background: #111111;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1/1.1;
+    transition: transform 0.3s ease;
+}
+
+.teamCard:hover {
+    transform: translateY(-5px);
+}
+
+.memberPhoto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #222222;
+}
+
+.photo {
+    transition: transform 0.5s ease;
+}
+
+.teamCard:hover .photo {
+    transform: scale(1.05);
+}
+
+.photoPlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #222222 0%, #111111 100%);
+}
+
+.memberInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    z-index: 2;
+}
+
+.memberInfo h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.memberInfo p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
 }
 
 .placeholder {
-    opacity: 0.5;
-    font-style: italic;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+    color: rgba(255,255,255,0.5);
+    font-size: 18px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .storyGrid {
         grid-template-columns: 1fr;
-        gap: 40px;
+    }
+    .valuesGrid {
+        grid-template-columns: 1fr;
     }
 }

@@ -9,6 +9,7 @@ interface ButtonProps {
     onClick?: () => void;
     type?: 'button' | 'submit' | 'reset';
     href?: string;
+    disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,8 +20,9 @@ const Button: React.FC<ButtonProps> = ({
     onClick,
     type = 'button',
     href,
+    disabled = false,
 }) => {
-    const buttonClasses = `${styles.button} ${styles[variant]} ${styles[size]} ${className}`;
+    const buttonClasses = `${styles.button} ${styles[variant]} ${styles[size]} ${className} ${disabled ? styles.disabled : ''}`;
 
     if (href) {
         return (
@@ -31,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
     }
 
     return (
-        <button type={type} className={buttonClasses} onClick={onClick}>
+        <button type={type} className={buttonClasses} onClick={onClick} disabled={disabled}>
             {children}
         </button>
     );

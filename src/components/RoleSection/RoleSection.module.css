@@ -1,0 +1,119 @@
+.roleSection {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 0 120px;
+  position: relative;
+  z-index: 20;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  position: relative;
+}
+
+.quoteButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.quoteButton {
+  background-color: #77FF3C; /* Brand green */
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: inline-block;
+}
+
+.quoteButton:hover {
+  transform: translateY(-2px);
+  background-color: #6ee33b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.imageColumn {
+  position: sticky;
+  top: 100px; /* Sticks while scrolling the text */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  font-family: var(--font-urbanist);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.heading:first-child {
+  margin-top: 0;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .imageColumn {
+    position: relative;
+    top: 0;
+  }
+  
+  .container {
+    padding: 0 32px;
+  }
+  
+  .heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roleSection {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+  
+  .quoteButton {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,148 @@
+.container {
+    padding-top: 0;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.fullWidthContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+
+.hero {
+    padding: 180px 0 100px;
+    background-color: #000;
+}
+
+.label {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgba(119, 255, 60, 0.3);
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: #77FF3C;
+}
+
+.title {
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    max-width: 900px;
+}
+
+.heroDesc {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.contentSection {
+    background-color: #f7f7f7;
+    color: #000;
+    padding: 120px 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.imageCol {
+    width: 100%;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.iconPlaceholder {
+    font-size: 150px;
+    text-align: center;
+    color: #000;
+    opacity: 0.1;
+}
+
+.textCol h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.detailsText {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+}
+
+.features {
+    margin-bottom: 40px;
+}
+
+.features h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.features li {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.check {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #77FF3C;
+    border-radius: 50%;
+    color: #000;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

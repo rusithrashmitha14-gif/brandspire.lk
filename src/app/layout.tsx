@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import MainLayout from "@/components/MainLayout";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,9 +28,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${urbanist.variable} antialiased`}
       >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
