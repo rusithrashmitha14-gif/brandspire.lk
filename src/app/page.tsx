@@ -31,7 +31,9 @@ export default async function Home() {
           <div className={styles.heroGrid}>
             <div className={styles.heroMain}>
               <div className={styles.heroContent}>
-                <h2 className={styles.agencyTitle}>Digital Marketing Agency</h2>
+                <h2 className={styles.agencyTitle}>
+                  Digital<br className={styles.mobileBreak} /> Marketing<br className={styles.mobileBreak} /> Agency
+                </h2>
                 <p className={styles.agencyDesc}>
                   At Brandspire, we empower brands to thrive in the digital world. With personalized marketing strategies that drive engagement and growth. Let's elevate your online presence together!
                 </p>

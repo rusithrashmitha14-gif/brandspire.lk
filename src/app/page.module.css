@@ -631,7 +631,15 @@
     }
 }
 
+.mobileBreak {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .mobileBreak {
+        display: block;
+    }
+
     .locationGrid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -650,9 +658,10 @@
     }
     
     .agencyTitle {
-        font-size: clamp(32px, 8vw, 44px);
+        font-size: clamp(48px, 13vw, 70px);
         word-wrap: break-word;
         hyphens: auto;
+        line-height: 1.05;
     }
     
     .bgLargeText {
