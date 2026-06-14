@@ -12,9 +12,13 @@ export async function createCaseStudy(prevState: any, formData: FormData) {
 
   if (imageFile && imageFile.size > 0) {
     const fileName = `${Date.now()}-${imageFile.name}`
+    const fileBuffer = await imageFile.arrayBuffer()
+    
     const { data: uploadData, error: uploadError } = await supabase.storage
       .from('brandspire')
-      .upload(`case-studies/${fileName}`, imageFile)
+      .upload(`case-studies/${fileName}`, fileBuffer, {
+        contentType: imageFile.type,
+      })
 
     if (uploadError) {
       return { error: `Upload failed: ${uploadError.message}` }
@@ -64,9 +68,13 @@ export async function updateCaseStudy(id: string, prevState: any, formData: Form
 
     if (imageFile && imageFile.size > 0) {
         const fileName = `${Date.now()}-${imageFile.name}`
+        const fileBuffer = await imageFile.arrayBuffer()
+        
         const { data: uploadData, error: uploadError } = await supabase.storage
             .from('brandspire')
-            .upload(`case-studies/${fileName}`, imageFile)
+            .upload(`case-studies/${fileName}`, fileBuffer, {
+                contentType: imageFile.type,
+            })
 
         if (uploadError) {
             return { error: `Upload failed: ${uploadError.message}` }
