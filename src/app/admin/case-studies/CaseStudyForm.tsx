@@ -15,7 +15,7 @@ export default function CaseStudyForm({ caseStudy }: { caseStudy?: any }) {
     const [state, formAction, isPending] = useActionState<FormState, FormData>(actionFunction, null);
 
     return (
-        <form className={styles.formContainer} action={formAction}>
+        <form className={styles.formContainer} action={formAction} encType="multipart/form-data">
             <div className={styles.form}>
                 {state?.error && (
                     <div className={styles.errorAlert}>{state.error}</div>
