@@ -76,21 +76,21 @@ export default function CaseStudyDetailClient({ caseStudy }: { caseStudy: any })
                             {caseStudy.problem && (
                                 <motion.section className={styles.contentSection} variants={fadeUp}>
                                     <h2>The Challenge</h2>
-                                    <p>{caseStudy.problem}</p>
+                                    <p style={{ whiteSpace: 'pre-wrap' }}>{caseStudy.problem}</p>
                                 </motion.section>
                             )}
 
                             {caseStudy.solution && (
                                 <motion.section className={styles.contentSection} variants={fadeUp}>
                                     <h2>Our Solution</h2>
-                                    <p>{caseStudy.solution}</p>
+                                    <p style={{ whiteSpace: 'pre-wrap' }}>{caseStudy.solution}</p>
                                 </motion.section>
                             )}
 
                             {caseStudy.results && (
                                 <motion.section className={styles.contentSection} variants={fadeUp}>
                                     <h2>The Results</h2>
-                                    <p>{caseStudy.results}</p>
+                                    <p style={{ whiteSpace: 'pre-wrap' }}>{caseStudy.results}</p>
                                 </motion.section>
                             )}
                         </div>
