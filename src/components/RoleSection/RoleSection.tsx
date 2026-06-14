@@ -17,15 +17,17 @@ export default function RoleSection() {
         <div className={styles.grid}>
           {/* Left Column - Image */}
           <div className={styles.imageColumn}>
-            <FadeUp delay={0.1} className={styles.imageWrapper}>
-              <Image 
-                src="/images/role-mockup.png" 
-                alt="Brandspire Digital Marketing Dashboard" 
-                width={800}
-                height={550}
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-              />
-            </FadeUp>
+            <div className={styles.stickyImage}>
+              <FadeUp delay={0.1} className={styles.imageWrapper}>
+                <Image 
+                  src="/images/role-mockup.png" 
+                  alt="Brandspire Digital Marketing Dashboard" 
+                  width={800}
+                  height={550}
+                  style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                />
+              </FadeUp>
+            </div>
           </div>
 
           {/* Right Column - Text Content */}

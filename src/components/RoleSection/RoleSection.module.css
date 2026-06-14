@@ -40,12 +40,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: flex-start;
 }
 
 .imageColumn {
+  height: 100%;
+}
+
+.stickyImage {
   position: sticky;
-  top: 100px; /* Sticks while scrolling the text */
+  top: 140px;
 }
 
 .imageWrapper {

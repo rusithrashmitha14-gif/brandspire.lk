@@ -168,18 +168,20 @@ export default async function Home() {
           <div className={styles.casesGrid}>
             {/* Left: Sticky Branding & Title */}
             <div className={styles.casesSidebar}>
-              <FadeUp delay={0.1} className={styles.stickyContent}>
-                <span className={styles.label}>OUR WORKS <span className={styles.dot}>.</span></span>
-                <h2 className={styles.casesMainTitle}>
-                  Case Studies, a selection of <span className={styles.highlight}>successful projects.</span>
-                </h2>
-                <p className={styles.casesSubDesc}>
-                  We always put our clients first to deliver our best time after time. Below is some of our proudest work.
-                </p>
-                <Link href="/case-studies" className={styles.viewAllLink}>
-                  View all Case Studies
-                </Link>
-              </FadeUp>
+              <div className={styles.stickyContent}>
+                <FadeUp delay={0.1}>
+                  <span className={styles.label}>OUR WORKS <span className={styles.dot}>.</span></span>
+                  <h2 className={styles.casesMainTitle}>
+                    Case Studies, a selection of <span className={styles.highlight}>successful projects.</span>
+                  </h2>
+                  <p className={styles.casesSubDesc}>
+                    We always put our clients first to deliver our best time after time. Below is some of our proudest work.
+                  </p>
+                  <Link href="/case-studies" className={styles.viewAllLink}>
+                    View all Case Studies
+                  </Link>
+                </FadeUp>
+              </div>
             </div>
 
             {/* Right: Vertical Scrolling Projects */}
