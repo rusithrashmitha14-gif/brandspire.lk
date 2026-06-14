@@ -42,6 +42,7 @@ const Navbar = () => {
                 </Link>
 
                 <div className={`${styles.links} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
+                    <Link href="/" className={`${styles.link} ${styles.mobileOnlyLink}`} onClick={closeMenu}>Home</Link>
                     <Link href="/services" className={styles.link} onClick={closeMenu}>Services</Link>
                     <Link href="/case-studies" className={styles.link} onClick={closeMenu}>Case Studies</Link>
                     <Link href="/about" className={styles.link} onClick={closeMenu}>About</Link>

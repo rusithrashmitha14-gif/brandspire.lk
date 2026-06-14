@@ -73,6 +73,10 @@
     opacity: 1;
 }
 
+.mobileOnlyLink {
+    display: none;
+}
+
 .mobileMenuBtn {
     display: none;
     flex-direction: column;
@@ -128,6 +132,10 @@
     .links.mobileOpen {
         transform: translateY(0);
         visibility: visible;
+    }
+
+    .mobileOnlyLink {
+        display: block;
     }
 
     .link {

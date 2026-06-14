@@ -1,5 +1,7 @@
 .container {
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Updated Hero / Intro (Image 2 style) */
