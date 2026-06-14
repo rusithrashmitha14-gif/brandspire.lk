@@ -18,6 +18,7 @@
   width: 100%;
   max-width: 100%;
   padding: 0 60px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
@@ -657,11 +658,30 @@
         font-size: 36px;
     }
     
+    .heroMain {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .heroContent {
+        max-width: 100%;
+        width: 100%;
+    }
+    
     .agencyTitle {
         font-size: clamp(48px, 13vw, 70px);
         word-wrap: break-word;
         hyphens: auto;
         line-height: 1.05;
+        max-width: 100%;
+    }
+    
+    .agencyDesc {
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 100%;
+        padding-right: 16px;
+        box-sizing: border-box;
     }
     
     .bgLargeText {
