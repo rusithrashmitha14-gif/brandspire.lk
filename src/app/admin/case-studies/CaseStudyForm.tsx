@@ -34,14 +34,23 @@ export default function CaseStudyForm({ caseStudy }: { caseStudy?: any }) {
                 </div>
 
                 <div className={styles.inputGroup}>
-                    <label htmlFor="industry">Industry</label>
-                    <input 
-                        type="text" 
+                    <label htmlFor="industry">Industry *</label>
+                    <select 
                         id="industry" 
                         name="industry" 
-                        defaultValue={caseStudy?.industry}
-                        placeholder="e.g. Retail & E-commerce"
-                    />
+                        defaultValue={caseStudy?.industry || ""}
+                        required
+                    >
+                        <option value="" disabled>Select an industry</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="E-Commerce">E-Commerce</option>
+                        <option value="Business & Corporate">Business & Corporate</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Education">Education</option>
+                        <option value="Food & Beverage">Food & Beverage</option>
+                        <option value="Web Applications">Web Applications</option>
+                    </select>
                 </div>
 
                 <div className={styles.inputGroup}>
