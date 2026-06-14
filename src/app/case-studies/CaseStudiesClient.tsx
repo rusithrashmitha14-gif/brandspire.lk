@@ -45,8 +45,7 @@ export default function CaseStudiesClient({ caseStudies }: { caseStudies: any[] 
                     <motion.div 
                         className={styles.grid}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
+                        animate="visible"
                         variants={staggerContainer}
                     >
                         {caseStudies && caseStudies.map((project: any) => (
@@ -84,8 +83,7 @@ export default function CaseStudiesClient({ caseStudies }: { caseStudies: any[] 
                 <div className="container">
                     <motion.div
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
+                        animate="visible"
                         variants={fadeUp}
                     >
                         <h2>Ready to trigger your next phase of growth?</h2>
