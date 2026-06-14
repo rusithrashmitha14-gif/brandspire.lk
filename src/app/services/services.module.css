@@ -427,6 +427,15 @@
     .timelineLine {
         display: none; /* Hide horizontal line on tablet/mobile */
     }
+    
+    .serviceRow {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .serviceRow.rowReverse {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
@@ -440,5 +449,29 @@
     .processGrid {
         grid-template-columns: 1fr;
         gap: 60px;
+    }
+    
+    .title {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .serviceInfo h2 {
+        font-size: 36px;
+    }
+    
+    .serviceVisual {
+        height: 350px;
+    }
+    
+    .whyText h2 {
+        font-size: 36px;
+    }
+    
+    .whyStats {
+        grid-template-columns: 1fr;
     }
 }

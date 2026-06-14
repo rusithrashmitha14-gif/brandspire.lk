@@ -198,3 +198,17 @@
         gap: 60px;
     }
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .content h3 {
+        font-size: 28px;
+    }
+}

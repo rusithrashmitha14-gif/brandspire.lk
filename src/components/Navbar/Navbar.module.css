@@ -77,12 +77,29 @@
     display: none;
     flex-direction: column;
     gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the drawer */
+    padding: 10px;
 }
 
 .mobileMenuBtn span {
     width: 24px;
     height: 2px;
     background-color: var(--foreground);
+    transition: all 0.3s ease;
+}
+
+/* Hamburger open (X) state */
+.mobileMenuBtn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobileMenuBtn.open span:nth-child(2) {
+    opacity: 0;
+}
+.mobileMenuBtn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -90,8 +107,33 @@
         padding: 0 24px;
     }
 
+    /* Hide links by default on mobile, setup drawer */
     .links {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--background);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        z-index: 1000;
+        transform: translateY(-100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        visibility: hidden;
+    }
+
+    .links.mobileOpen {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .link {
+        font-size: 24px;
+        font-weight: 700;
+        opacity: 1;
     }
 
     .mobileMenuBtn {
@@ -102,5 +144,7 @@
         height: 80px;
         transform: scale(1.1);
         transform-origin: left center;
+        position: relative;
+        z-index: 1001; /* Keep logo above drawer */
     }
 }

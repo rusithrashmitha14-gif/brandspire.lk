@@ -216,3 +216,21 @@
         padding: 40px 20px;
     }
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .infoBlock a, .infoBlock p {
+        font-size: 24px;
+    }
+    
+    .contactFormBox h2 {
+        font-size: 28px;
+    }
+}

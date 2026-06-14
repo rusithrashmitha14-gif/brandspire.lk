@@ -254,8 +254,36 @@
 @media (max-width: 1024px) {
     .storyGrid {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
     .valuesGrid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .storySection, .valuesSection, .teamSection {
+        padding: 80px 0;
+    }
+    
+    .lead {
+        font-size: 24px;
+    }
+    
+    .sectionTitle {
+        font-size: 32px;
+    }
+    
+    .teamGrid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
 }

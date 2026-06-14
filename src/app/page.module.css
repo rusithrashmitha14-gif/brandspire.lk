@@ -604,9 +604,7 @@
         grid-template-columns: 1fr;
         gap: 60px;
     }
-}
-
-@media (max-width: 1024px) {
+    
     .heroGrid {
         grid-template-columns: 1fr;
     }
@@ -614,11 +612,27 @@
     .heroSidebar {
         display: none;
     }
+    
+    .casesGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .stickyContent {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+    }
+    
+    .casesList {
+        gap: 80px;
+    }
 }
 
 @media (max-width: 768px) {
     .locationGrid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .slide {
@@ -627,5 +641,30 @@
 
     .teamGrid {
         grid-template-columns: 1fr;
+    }
+    
+    .casesMainTitle {
+        font-size: 36px;
+    }
+    
+    .agencyTitle {
+        font-size: clamp(40px, 10vw, 60px);
+    }
+    
+    .bgLargeText {
+        font-size: clamp(60px, 15vw, 150px);
+        right: 10px;
+    }
+    
+    .locationTitle {
+        font-size: 32px;
+    }
+    
+    .contactTitle {
+        font-size: 40px;
+    }
+    
+    .startProjectLink {
+        font-size: 28px;
     }
 }
