@@ -138,6 +138,8 @@
 
     .mobileMenuBtn {
         display: flex;
+        position: relative;
+        z-index: 1002; /* Must be higher than the drawer (1000) and logo (1001) */
     }
     
     .logoImg {

@@ -648,12 +648,13 @@
     }
     
     .agencyTitle {
-        font-size: clamp(40px, 10vw, 60px);
+        font-size: clamp(32px, 8vw, 44px);
+        word-wrap: break-word;
+        hyphens: auto;
     }
     
     .bgLargeText {
-        font-size: clamp(60px, 15vw, 150px);
-        right: 10px;
+        display: none; /* Mouse glow effect doesn't make sense on touch, and text clashes */
     }
     
     .locationTitle {
