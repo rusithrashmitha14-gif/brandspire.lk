@@ -8,6 +8,7 @@ import HeroSlogan from "./HeroSlogan";
 import LogoStrip from "@/components/LogoStrip/LogoStrip";
 import RoleSection from "@/components/RoleSection/RoleSection";
 import HoverCursor from "@/components/HoverCursor/HoverCursor";
+import FadeUp from "@/components/Animations/FadeUp";
 
 export default async function Home() {
   const supabase = await createClient();
@@ -167,7 +168,7 @@ export default async function Home() {
           <div className={styles.casesGrid}>
             {/* Left: Sticky Branding & Title */}
             <div className={styles.casesSidebar}>
-              <div className={styles.stickyContent}>
+              <FadeUp delay={0.1} className={styles.stickyContent}>
                 <span className={styles.label}>OUR WORKS <span className={styles.dot}>.</span></span>
                 <h2 className={styles.casesMainTitle}>
                   Case Studies, a selection of <span className={styles.highlight}>successful projects.</span>
@@ -178,30 +179,32 @@ export default async function Home() {
                 <Link href="/case-studies" className={styles.viewAllLink}>
                   View all Case Studies
                 </Link>
-              </div>
+              </FadeUp>
             </div>
 
             {/* Right: Vertical Scrolling Projects */}
             <div className={styles.casesList}>
-              {caseStudies && caseStudies.length > 0 ? caseStudies.map((study: any) => (
-                <Link href={`/case-studies/${study.slug}`} key={study.id} className={styles.caseEntry}>
-                  <div className={styles.caseImgWrapper}>
-                    <HoverCursor>
-                      {study.images?.[0] ? (
-                        <Image 
-                          src={study.images[0]} 
-                          alt={study.client_name}
-                          fill
-                          className={styles.caseImg}
-                          style={{ objectFit: 'cover' }}
-                        />
-                      ) : (
-                        <div className={styles.caseImg}></div>
-                      )}
-                    </HoverCursor>
-                  </div>
-                  <h3 className={styles.caseTitle}>{study.client_name}</h3>
-                </Link>
+              {caseStudies && caseStudies.length > 0 ? caseStudies.map((study: any, idx: number) => (
+                <FadeUp key={study.id} delay={0.2 + (idx * 0.1)}>
+                  <Link href={`/case-studies/${study.slug}`} className={styles.caseEntry}>
+                    <div className={styles.caseImgWrapper}>
+                      <HoverCursor>
+                        {study.images?.[0] ? (
+                          <Image 
+                            src={study.images[0]} 
+                            alt={study.client_name}
+                            fill
+                            className={styles.caseImg}
+                            style={{ objectFit: 'cover' }}
+                          />
+                        ) : (
+                          <div className={styles.caseImg}></div>
+                        )}
+                      </HoverCursor>
+                    </div>
+                    <h3 className={styles.caseTitle}>{study.client_name}</h3>
+                  </Link>
+                </FadeUp>
               )) : (
                 <p className={styles.placeholder}>Case studies coming soon.</p>
               )}
